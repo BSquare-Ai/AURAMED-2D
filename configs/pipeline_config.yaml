@@ -1,0 +1,49 @@
+# I-AURA-MED2D Pipeline Configuration
+# Optimized for MacBook Air (Apple Silicon)
+
+# --------------------------------------------------
+# Agent configurations
+# --------------------------------------------------
+agents:
+  segmentation:
+    model_path: "models/imis_bench"
+    device: "mps"
+    image_size: 1024
+    confidence_threshold: 0.5
+
+  router:
+    router_type: "simple"
+    model_path: null
+    device: "mps"
+
+  report:
+    device: "mps"
+    rrg_path: "models/rrg_checkpoint"
+    use_cloud: false   # RRG runs locally
+
+  reasoning:
+    # 🔑 BioMedGPT Cloud endpoint (MUST end with /infer)
+    api_url: https://nonspatially-behavioristic-santana.ngrok-free.dev/infer
+    device: "cloud"
+
+  validation:
+    umls_enabled: false
+    snomed_enabled: false
+    radgraph_enabled: true
+    umls_path: null
+    snomed_path: null
+
+# --------------------------------------------------
+# Pipeline settings
+# --------------------------------------------------
+pipeline:
+  enable_reasoning: true
+  enable_validation: true
+  default_modality: "xray"
+
+# --------------------------------------------------
+# Logging
+# --------------------------------------------------
+logging:
+  level: "INFO"
+  file: "logs/pipeline.log"
