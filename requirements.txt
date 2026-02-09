@@ -1,0 +1,45 @@
+# I-AURA-MED2D Requirements
+
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.21.0
+Pillow>=9.0.0
+opencv-python>=4.5.0
+
+# Medical imaging
+monai>=1.0.0
+nibabel>=5.0.0
+
+# Transformers and NLP
+transformers>=4.30.0
+huggingface-hub>=0.15.0
+sentencepiece>=0.1.99
+
+# Data processing
+pandas>=1.5.0
+scipy>=1.9.0
+scikit-learn>=1.1.0
+
+# Configuration
+pyyaml>=6.0
+
+# API (optional)
+flask>=2.3.0
+fastapi>=0.100.0
+uvicorn>=0.23.0
+
+# Demo UI
+gradio>=4.0.0
+matplotlib>=3.6.0
+
+# Utilities
+tqdm>=4.65.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Development
+pytest>=7.3.0
+black>=23.0.0
+flake8>=6.0.0
+
